@@ -1,0 +1,1 @@
+BlackBlue.xaml is a theme for the Wox launcher.
