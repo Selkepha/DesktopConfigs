@@ -25,4 +25,9 @@ sudo apt update
 sudo apt install code
 
 # Add pop-shell and disable window titles
+sudo apt install pop-shell pop-shell-shortcuts
 
+# Dropbox
+# Obsidian
+# Focus-writer
+# Only-Office
