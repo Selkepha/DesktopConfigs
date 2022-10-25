@@ -1,9 +1,11 @@
 #! /bin/bash
 
-# A basic Ubuntu-Linux setup script, that applies my own personalconfigurations
+# A basic Ubuntu-Linux setup script, that applies my own personal configurations to GNOME desktops.
 
 # Configure GNOME Desktop
 gsettings set org.gnome.desktop.interface show-battery-percentage true
+gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
 # Make timeshift backup
 sudo apt update
@@ -24,8 +26,14 @@ sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code
 
-# Add pop-shell and disable window titles
+# Add pop-shell
 sudo apt install pop-shell pop-shell-shortcuts
+
+# Languages
+#sudo apt install ibus ibus-anthy
+# Must re-boot for ibus-anthy to take effect.
+#reboot
+#ibus-setup
 
 # Dropbox
 # Obsidian
