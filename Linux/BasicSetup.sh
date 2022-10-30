@@ -17,6 +17,20 @@ echo ----------------------------------------------
 sudo apt upgrade
 sudo apt install git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter -y
 
+# Add pop-shell
+echo ----------------------------------------------
+echo BasicSetup.sh | Installing GNOME extensions...
+echo ----------------------------------------------
+sudo apt install pop-shell pop-shell-shortcuts
+
+# Configure GNOME Desktop
+echo ----------------------------------------------
+echo BasicSetup.sh | Configuring GNOME...
+echo ----------------------------------------------
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+
 # Visual Studio Code
 echo ----------------------------------------------
 echo BasicSetup.sh | Installing Visual Studio Code...
@@ -30,20 +44,6 @@ sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code
 
-# Configure GNOME Desktop
-echo ----------------------------------------------
-echo BasicSetup.sh | Configuring GNOME...
-echo ----------------------------------------------
-gsettings set org.gnome.desktop.interface show-battery-percentage true
-gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
-gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
-
-# Add pop-shell
-echo ----------------------------------------------
-echo BasicSetup.sh | Installing GNOME extensions...
-echo ----------------------------------------------
-sudo apt install pop-shell pop-shell-shortcuts
-
 # Languages
 #sudo apt install ibus ibus-anthy
 # Must re-boot for ibus-anthy to take effect.
@@ -55,13 +55,14 @@ sudo apt install pop-shell pop-shell-shortcuts
 echo ----------------------------------------------
 echo BasicSetup.sh | Installing Dropbox...
 echo ----------------------------------------------
-gsettings set org.gnome.desktop.interface show-battery-percentage true
-gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
-gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
-
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
 # Need to add above line to startup, too.
 
-# Obsidian
+#echo ----------------------------------------------
+#echo BasicSetup.sh | Installing Obsidian...
+#echo ----------------------------------------------
+#sudo apt install snapd
+#sudo snap install obsidian
+
 # Only-Office
