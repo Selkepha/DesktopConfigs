@@ -4,28 +4,28 @@
 
 # Make timeshift backup
 echo ----------------------------------------------
-echo BasicSetup.sh | Creating Timeshift backup...
+echo BasicSetup.sh \\ Creating Timeshift backup...
 echo ----------------------------------------------
-sudo apt update
 sudo apt install timeshift -y
 sudo timeshift --create --comments "First Backup"
 
 # Now upgrade and add applications
 echo ----------------------------------------------
-echo BasicSetup.sh | Upgrading packages...
+echo BasicSetup.sh \\ Upgrading packages...
 echo ----------------------------------------------
+sudo apt update
 sudo apt upgrade
 sudo apt install git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter -y
 
 # Add pop-shell
 echo ----------------------------------------------
-echo BasicSetup.sh | Installing GNOME extensions...
+echo BasicSetup.sh \\ Installing GNOME extensions...
 echo ----------------------------------------------
 sudo apt install pop-shell pop-shell-shortcuts
 
 # Configure GNOME Desktop
 echo ----------------------------------------------
-echo BasicSetup.sh | Configuring GNOME...
+echo BasicSetup.sh \\ Configuring GNOME...
 echo ----------------------------------------------
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
@@ -33,7 +33,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
 # Visual Studio Code
 echo ----------------------------------------------
-echo BasicSetup.sh | Installing Visual Studio Code...
+echo BasicSetup.sh \\ Installing Visual Studio Code...
 echo ----------------------------------------------
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -53,14 +53,14 @@ sudo apt install code
 # Dropbox
 # Configure GNOME Desktop
 echo ----------------------------------------------
-echo BasicSetup.sh | Installing Dropbox...
+echo BasicSetup.sh \\ Installing Dropbox...
 echo ----------------------------------------------
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
 # Need to add above line to startup, too.
 
 #echo ----------------------------------------------
-#echo BasicSetup.sh | Installing Obsidian...
+#echo BasicSetup.sh \\ Installing Obsidian...
 #echo ----------------------------------------------
 #sudo apt install snapd
 #sudo snap install obsidian
