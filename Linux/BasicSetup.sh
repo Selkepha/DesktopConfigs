@@ -21,7 +21,7 @@ sudo apt install git vim firefox discord papirus-icon-theme gnome-tweaks gnome-s
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing GNOME extensions...
 echo ----------------------------------------------
-#sudo apt install pop-shell pop-shell-shortcuts
+sudo apt install pop-shell pop-shell-shortcuts
 
 # Configure GNOME Desktop
 echo ----------------------------------------------
@@ -35,7 +35,6 @@ gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
 
 #Apply Nord theme
-
 
 # Visual Studio Code
 echo ----------------------------------------------
@@ -57,17 +56,30 @@ sudo apt install code
 #ibus-setup
 
 # Dropbox
-echo ----------------------------------------------
-echo BasicSetup.sh \\ Installing Dropbox...
-echo ----------------------------------------------
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-#~/.dropbox-dist/dropboxd
-# Need to add above line to startup, too.
+#echo ----------------------------------------------
+#echo BasicSetup.sh \\ Installing Dropbox...
+#echo ----------------------------------------------
+#cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+#~/.dropbox-dist/dropboxd &
+#cd ~/Downloads
+#wget https://www.dropbox.com/download?dl=packages/dropbox.py
+#mv download?dl=packages%2Fdropbox.py dropbox.py
+#mv dropbox.py ~/bin/dropbox.py
+#chmod 755 ~/bin/dropbox.py
+#~/bin/dropbox.py autostart y
+#~/bin/dropbox.py start
+#~/bin/dropbox.py status
 
-#echo ----------------------------------------------
-#echo BasicSetup.sh \\ Installing Obsidian...
-#echo ----------------------------------------------
-#sudo apt install snapd
-#sudo snap install obsidian
+echo ----------------------------------------------
+echo BasicSetup.sh \\ Installing Flatpak...
+echo ----------------------------------------------
+sudo apt install Flatpak
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+
+echo ----------------------------------------------
+echo BasicSetup.sh \\ Installing Obsidian...
+echo ----------------------------------------------
+flatpak install flathub md.obsidian.Obsidian
 
 # Only-Office
