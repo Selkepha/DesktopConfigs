@@ -21,7 +21,7 @@ sudo apt install git vim firefox discord papirus-icon-theme gnome-tweaks gnome-s
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing GNOME extensions...
 echo ----------------------------------------------
-sudo apt install pop-shell pop-shell-shortcuts
+#sudo apt install pop-shell pop-shell-shortcuts
 
 # Configure GNOME Desktop
 echo ----------------------------------------------
@@ -30,6 +30,12 @@ echo ----------------------------------------------
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.peripherals.mouse natural-scholl true 
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
+
+#Apply Nord theme
+
 
 # Visual Studio Code
 echo ----------------------------------------------
@@ -51,12 +57,11 @@ sudo apt install code
 #ibus-setup
 
 # Dropbox
-# Configure GNOME Desktop
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Dropbox...
 echo ----------------------------------------------
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd
+#~/.dropbox-dist/dropboxd
 # Need to add above line to startup, too.
 
 #echo ----------------------------------------------
