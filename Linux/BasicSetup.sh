@@ -2,6 +2,9 @@
 
 # A basic Ubuntu-Linux setup script, that applies my own personal configurations to GNOME desktops.
 
+# Exit when any command fails
+set -e
+
 # Make timeshift backup
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Creating Timeshift backup...
@@ -34,7 +37,8 @@ gsettings set org.gnome.desktop.peripherals.mouse natural-scholl true
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
 
-#Apply Nord theme
+# Apply Papirus Icons
+# Apply Nord theme
 
 # Visual Studio Code
 echo ----------------------------------------------
@@ -56,19 +60,19 @@ sudo apt install code
 #ibus-setup
 
 # Dropbox
-#echo ----------------------------------------------
-#echo BasicSetup.sh \\ Installing Dropbox...
-#echo ----------------------------------------------
-#cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-#~/.dropbox-dist/dropboxd &
-#cd ~/Downloads
-#wget https://www.dropbox.com/download?dl=packages/dropbox.py
-#mv download?dl=packages%2Fdropbox.py dropbox.py
-#mv dropbox.py ~/bin/dropbox.py
-#chmod 755 ~/bin/dropbox.py
-#~/bin/dropbox.py autostart y
-#~/bin/dropbox.py start
-#~/bin/dropbox.py status
+echo ----------------------------------------------
+echo BasicSetup.sh \\ Installing Dropbox...
+echo ----------------------------------------------
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd &
+cd ~/Downloads
+wget https://www.dropbox.com/download?dl=packages/dropbox.py
+mv download?dl=packages%2Fdropbox.py dropbox.py
+mv dropbox.py ~/bin/dropbox.py
+chmod 755 ~/bin/dropbox.py
+~/bin/dropbox.py autostart y
+~/bin/dropbox.py start
+~/bin/dropbox.py status
 
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Flatpak...
