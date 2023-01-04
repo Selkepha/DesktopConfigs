@@ -5,13 +5,6 @@
 # Exit when any command fails
 set -e
 
-# Make timeshift backup
-echo ----------------------------------------------
-echo BasicSetup.sh \\ Creating Timeshift backup...
-echo ----------------------------------------------
-sudo apt install timeshift -y
-sudo timeshift --create --comments "First Backup"
-
 # Now upgrade and add applications
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Upgrading packages...
@@ -19,6 +12,13 @@ echo ----------------------------------------------
 sudo apt update
 sudo apt upgrade
 sudo apt install git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter -y
+
+# Make timeshift backup
+echo ----------------------------------------------
+echo BasicSetup.sh \\ Creating Timeshift backup...
+echo ----------------------------------------------
+sudo apt install timeshift -y
+sudo timeshift --create --comments "First Backup"
 
 # Add pop-shell
 echo ----------------------------------------------
@@ -38,7 +38,12 @@ gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
 
 # Apply Papirus Icons
-# Apply Nord theme
+
+# ULauncher
+echo ----------------------------------------------
+echo BasicSetup.sh \\ Installing ULauncher...
+echo ----------------------------------------------
+sudo add-apt-repository ppa:agornostal/ulauncher && sudo apt update && sudo apt install ulauncher
 
 # Visual Studio Code
 echo ----------------------------------------------
