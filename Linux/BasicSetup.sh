@@ -33,7 +33,7 @@ echo ----------------------------------------------
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
-gsettings set org.gnome.desktop.peripherals.mouse natural-scholl true 
+gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true 
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
 
@@ -64,21 +64,6 @@ sudo apt install code
 #reboot
 #ibus-setup
 
-# Dropbox
-echo ----------------------------------------------
-echo BasicSetup.sh \\ Installing Dropbox...
-echo ----------------------------------------------
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd &
-cd ~/Downloads
-wget https://www.dropbox.com/download?dl=packages/dropbox.py
-mv download?dl=packages%2Fdropbox.py dropbox.py
-mv dropbox.py ~/bin/dropbox.py
-chmod 755 ~/bin/dropbox.py
-~/bin/dropbox.py autostart y
-~/bin/dropbox.py start
-~/bin/dropbox.py status
-
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Flatpak...
 echo ----------------------------------------------
@@ -96,4 +81,20 @@ echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Only-Office...
 echo ----------------------------------------------
 flatpak install flathub org.onlyoffice.desktopeditors
+
+# Dropbox
+echo ----------------------------------------------
+echo BasicSetup.sh \\ Installing Dropbox...
+echo ----------------------------------------------
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd &
+cd ~/Downloads
+wget https://www.dropbox.com/download?dl=packages/dropbox.py
+mv download?dl=packages%2Fdropbox.py dropbox.py
+mv dropbox.py ~/bin/dropbox.py
+chmod 755 ~/bin/dropbox.py
+~/bin/dropbox.py autostart y
+~/bin/dropbox.py start
+~/bin/dropbox.py status
+
 
