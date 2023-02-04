@@ -39,12 +39,6 @@ gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
 
 # Apply Papirus Icons
 
-# ULauncher
-echo ----------------------------------------------
-echo BasicSetup.sh \\ Installing ULauncher...
-echo ----------------------------------------------
-sudo add-apt-repository ppa:agornostal/ulauncher && sudo apt update && sudo apt install ulauncher
-
 # Visual Studio Code
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Visual Studio Code...
@@ -67,7 +61,7 @@ sudo apt install code
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Flatpak...
 echo ----------------------------------------------
-sudo apt install Flatpak
+sudo apt install flatpak
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 
@@ -88,13 +82,6 @@ echo BasicSetup.sh \\ Installing Dropbox...
 echo ----------------------------------------------
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd &
-cd ~/Downloads
-wget https://www.dropbox.com/download?dl=packages/dropbox.py
-mv download?dl=packages%2Fdropbox.py dropbox.py
-mv dropbox.py ~/bin/dropbox.py
-chmod 755 ~/bin/dropbox.py
-~/bin/dropbox.py autostart y
-~/bin/dropbox.py start
-~/bin/dropbox.py status
+mv Dropbox.desktop ~/.config/autostart/
 
 
