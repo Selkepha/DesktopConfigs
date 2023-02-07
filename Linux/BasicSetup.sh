@@ -11,7 +11,7 @@ echo BasicSetup.sh \\ Upgrading packages...
 echo ----------------------------------------------
 sudo apt update
 sudo apt upgrade
-sudo apt install git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter -y
+sudo apt install nautilus-dropbox git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter -y
 
 # Make timeshift backup
 echo ----------------------------------------------
@@ -64,7 +64,6 @@ echo ----------------------------------------------
 sudo apt install flatpak
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Obsidian...
 echo ----------------------------------------------
@@ -75,13 +74,4 @@ echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Only-Office...
 echo ----------------------------------------------
 flatpak install flathub org.onlyoffice.desktopeditors
-
-# Dropbox
-echo ----------------------------------------------
-echo BasicSetup.sh \\ Installing Dropbox...
-echo ----------------------------------------------
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-~/.dropbox-dist/dropboxd &
-mv Dropbox.desktop ~/.config/autostart/
-
 
