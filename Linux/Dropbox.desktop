@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Dropbox
-Comment=Starts dropboxd.
-Exec=bash -c '~/.dropbox-dist/dropboxd'
-Icon=MidnightCommander
-Terminal=false
-Type=Application
