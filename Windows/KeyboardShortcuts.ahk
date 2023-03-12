@@ -3,9 +3,9 @@ SendMode Input  	; Recommended for new scripts due to its superior speed and rel
 #SingleInstance
 
 ; Replace Start Menu Shortcut
-LWin::
-Send, ^{F1} ; ---> Open Launchy Instead
-return
+; LWin::
+; Send, ^{F1} ; ---> Open Launchy Instead
+; return
 
 
 ; Win + Q ---> Quit Window
