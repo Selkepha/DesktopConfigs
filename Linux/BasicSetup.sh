@@ -11,7 +11,7 @@ echo BasicSetup.sh \\ Upgrading packages...
 echo ----------------------------------------------
 sudo apt update
 sudo apt upgrade
-sudo apt install nautilus-dropbox git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter -y
+sudo apt install nautilus-dropbox git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter conky -y
 
 # Make timeshift backup
 echo ----------------------------------------------
@@ -38,6 +38,10 @@ gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
 
 # Apply Papirus Icons
+
+# Conky Theme and Autostart
+cp Conky/myconky.conf ~/.config/conky
+cp Conky/conky.desktop ~/.config/autostart
 
 # Visual Studio Code
 echo ----------------------------------------------
