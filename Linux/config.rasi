@@ -1,0 +1,46 @@
+// Rofi Theme - J. James - 20th July '23
+// Place in ~/.config/rofi/ to enable.
+
+// Command: rofi -show.
+// Shortcut: ctrl + space is a nice option.
+
+//@theme "/usr/share/rofi/themes/Adapta-Nokto.rasi"
+
+// Documentation: https://davatorium.github.io/rofi/1.7.5/rofi-theme.5/#listview
+
+configuration{
+    modes: [ combi ];
+    combi-modes: [window, drun];
+}
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+
+window {
+    width: 512px;
+}
+
+element {
+  orientation: horizontal;
+  children: [ element-text, element-icon ];
+  spacing: 5px;
+}
+
+element-icon {
+    size: 2em;
+    theme: "Papirus-Dark";
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+listview {
+    columns: 1;
+    lines: 3;
+}
+
+inputbar {
+    children: [entry]; // Remove prompt and : widgets
+}
+
+

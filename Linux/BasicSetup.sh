@@ -9,39 +9,39 @@ set -e
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Upgrading packages...
 echo ----------------------------------------------
-sudo apt update
-sudo apt upgrade
-sudo apt install nautilus-dropbox git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter conky -y
+#sudo apt update
+#sudo apt upgrade
+#sudo apt install nautilus-dropbox git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter conky -y
 
 # Make timeshift backup
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Creating Timeshift backup...
 echo ----------------------------------------------
-sudo apt install timeshift -y
-sudo timeshift --create --comments "First Backup"
+#sudo apt install timeshift -y
+#sudo timeshift --create --comments "First Backup"
 
 # Add pop-shell
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing GNOME extensions...
 echo ----------------------------------------------
-sudo apt install pop-shell pop-shell-shortcuts
+#sudo apt install pop-shell pop-shell-shortcuts
 
 # Configure GNOME Desktop
 echo ----------------------------------------------
 echo BasicSetup.sh \\ Configuring GNOME...
 echo ----------------------------------------------
-gsettings set org.gnome.desktop.interface show-battery-percentage true
-gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
-gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
-gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true 
-gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
-gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
+#gsettings set org.gnome.desktop.interface show-battery-percentage true
+#gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
+#gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+#gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true 
+#gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+#gsettings set org.gnome.desktop.peripherals.mouse speed 0.7
 
 # Apply Papirus Icons
 
 # Conky Theme and Autostart
-cp Conky/myconky.conf ~/.config/conky
-cp Conky/conky.desktop ~/.config/autostart
+#cp Conky/myconky.conf ~/.config/conky
+#cp Conky/conky.desktop ~/.config/autostart
 
 # Visual Studio Code
 echo ----------------------------------------------
@@ -78,4 +78,5 @@ echo ----------------------------------------------
 echo BasicSetup.sh \\ Installing Only-Office...
 echo ----------------------------------------------
 flatpak install flathub org.onlyoffice.desktopeditors
+
 
