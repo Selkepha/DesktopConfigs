@@ -11,7 +11,7 @@ echo BasicSetup.sh \\ Upgrading packages...
 echo ----------------------------------------------
 #sudo apt update
 #sudo apt upgrade
-#sudo apt install nautilus-dropbox git vim firefox discord papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop focuswriter conky -y
+#sudo apt install papirus-icon-theme gnome-tweaks gnome-shell-extension-manager htop -y
 
 # Make timeshift backup
 echo ----------------------------------------------
