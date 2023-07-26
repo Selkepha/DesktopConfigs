@@ -9,10 +9,9 @@
 // Documentation: https://davatorium.github.io/rofi/1.7.5/rofi-theme.5/#listview
 
 configuration{
-    modes: [ combi ];
-    combi-modes: [window, drun];
+    combi-modi: [drun];
     icon-theme: "Papirus-Dark";
-    drun-match-fields: "name";
+    drun-match-fields: "all";
 }
 
 @theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
