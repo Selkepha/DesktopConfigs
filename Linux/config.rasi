@@ -12,6 +12,7 @@ configuration{
     modes: [ combi ];
     combi-modes: [window, drun];
     icon-theme: "Papirus-Dark";
+    drun-match-fields: "name";
 }
 
 @theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
