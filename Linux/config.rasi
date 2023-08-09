@@ -9,9 +9,14 @@
 // Documentation: https://davatorium.github.io/rofi/1.7.5/rofi-theme.5/#listview
 
 configuration{
-    combi-modi: [window,drun];
+    combi-modi: [drun];
     icon-theme: "Papirus-Dark";
     drun-match-fields: "all";
+    
+    display-drun:               "";
+    drun-display-format:        "{name}";
+    
+    display-window: "";
 }
 
 * {
@@ -63,12 +68,14 @@ configuration{
 
 window {
     width: 512px;
+    border-radius: 12px;
 }
 
 element {
   orientation: horizontal;
-  children: [element-text,  element-icon];
+  children: [element-icon, element-text];
   spacing: 5px;
+  border-radius: 6px;
 }
 
 element-icon {
@@ -81,11 +88,12 @@ element-text {
     expand: true;
     size: 5em;
     vertical-align: 0.5;
+    horizontal-align: 0.5;
 }
 
 listview {
     columns: 1;
-    lines: 3;
+    lines: 5;
     scrollbar: false;
 }
 
