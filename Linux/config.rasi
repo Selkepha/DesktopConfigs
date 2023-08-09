@@ -7,12 +7,16 @@
 configuration{
     combi-modi: [drun];
     icon-theme: "Papirus-Dark";
-    drun-match-fields: "all";
+
+	matching: [normal];
+    drun-match-fields: [name];
     
     display-drun:               "";
     drun-display-format:        "{name}";
     
     display-window: "";
+
+	max-history-size: 10;
 }
 
 * {
