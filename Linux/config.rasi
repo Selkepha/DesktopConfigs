@@ -1,12 +1,8 @@
 // Rofi Theme - J. James - 20th July '23
 // Place in ~/.config/rofi/ to enable.
 
-// Command: rofi -show.
+// Command: rofi -show combi
 // Shortcut: ctrl + space is a nice option.
-
-//@theme "/usr/share/rofi/themes/Adapta-Nokto.rasi"
-
-// Documentation: https://davatorium.github.io/rofi/1.7.5/rofi-theme.5/#listview
 
 configuration{
     combi-modi: [drun];
@@ -21,8 +17,7 @@ configuration{
 
 * {
     /* Theme settings */
-    highlight: bold italic;
-    scrollbar: true;
+    highlight: white;
 
     /* Gruvbox dark colors */
     gruvbox-dark-bg0-soft:     #32302f;
@@ -64,24 +59,32 @@ configuration{
     alternate-urgent-foreground: @urgent-foreground;
     selected-urgent-background:  @gruvbox-dark-red-light;
     selected-urgent-foreground:  @urgent-foreground;
+
+    defaultBorderRadius: 12px;
+    defaultPadding: 4px;
 }
 
 window {
-    width: 512px;
-    border-radius: 12px;
+    width: 384px;
+    border-radius: @defaultBorderRadius;
+    padding: @defaultPadding;
+	font: "Ubuntu Regular 16px";
 }
 
 element {
   orientation: horizontal;
   children: [element-icon, element-text];
-  spacing: 5px;
-  border-radius: 6px;
+  border-radius: 10px;
+  padding: 0px;
 }
 
 element-icon {
-    size: 2em;
+	margin: 8px;
+    size: 48px;
     theme: "Papirus-Dark";
     vertical-align: 0.5;
+	horizontal-align: 0.5;
+	spacing: 10px;
 }
 
 element-text {
@@ -93,12 +96,13 @@ element-text {
 
 listview {
     columns: 1;
-    lines: 5;
+    lines: 3;
     scrollbar: false;
 }
 
 inputbar {
     children: [entry]; // Remove prompt and : widgets
+	margin: 4px;
 }
 
 
