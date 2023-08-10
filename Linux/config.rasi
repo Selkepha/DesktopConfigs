@@ -5,7 +5,7 @@
 // Shortcut: ctrl + space is a nice option.
 
 configuration{
-    combi-modi: [drun];
+    combi-modi: [drun,files];
     icon-theme: "Papirus-Dark";
 
 	matching: [normal];
@@ -64,7 +64,7 @@ configuration{
     selected-urgent-background:  @gruvbox-dark-red-light;
     selected-urgent-foreground:  @urgent-foreground;
 
-    defaultBorderRadius: 12px;
+    defaultBorderRadius: 6px;
     defaultPadding: 4px;
 }
 
@@ -78,12 +78,12 @@ window {
 element {
   orientation: horizontal;
   children: [element-icon, element-text];
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 0px;
 }
 
 element-icon {
-	margin: 8px;
+	margin: 2px;
     size: 48px;
     theme: "Papirus-Dark";
     vertical-align: 0.5;
@@ -108,5 +108,4 @@ inputbar {
     children: [entry]; // Remove prompt and : widgets
 	margin: 4px;
 }
-
 
