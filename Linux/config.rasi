@@ -8,7 +8,7 @@ configuration{
     combi-modi: [drun,files];
     icon-theme: "Papirus-Dark";
 
-	matching: [normal];
+	matching: [fuzzy];
     drun-match-fields: [name];
     
     display-drun:               "";
@@ -108,4 +108,5 @@ inputbar {
     children: [entry]; // Remove prompt and : widgets
 	margin: 4px;
 }
+
 
