@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Reboot
+Exec=systemctl reboot
+Icon=system-reboot
+
+Name[en_GB]=Reboot
