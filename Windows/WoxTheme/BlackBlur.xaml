@@ -26,9 +26,10 @@
 	<Style x:Key="WindowBorderStyle" BasedOn="{StaticResource BaseWindowBorderStyle}" TargetType="{x:Type Border}">
         <Setter Property="Background">
             <Setter.Value>
-                <SolidColorBrush Color="#121212" Opacity="0.4" />
+                <SolidColorBrush Color="#121212" Opacity="0.8" />
             </Setter.Value>
         </Setter>
+		<Setter Property="CornerRadius" Value="12"/>
     </Style>
 
     <Style x:Key="WindowStyle" BasedOn="{StaticResource BaseWindowStyle}" TargetType="{x:Type Window}">
@@ -37,6 +38,7 @@
 					<SolidColorBrush Color="#121212" Opacity="0.2" />
 				</Setter.Value>
 			</Setter>
+			<Setter Property="Width" Value="800" />
     </Style>
 
 	<Style x:Key="PendingLineStyle" BasedOn="{StaticResource BasePendingLineStyle}" TargetType="{x:Type Line}"></Style>
@@ -51,6 +53,7 @@
 	<Style x:Key="ItemTitleSelectedStyle" BasedOn="{StaticResource BaseItemTitleSelectedStyle}" TargetType="{x:Type TextBlock}">
 		<Setter Property="Foreground" Value="#FFFFF8" />
 	</Style>
+
 
 	<Style x:Key="ItemSubTitleSelectedStyle" BasedOn="{StaticResource BaseItemSubTitleSelectedStyle}" TargetType="{x:Type TextBlock}">
 		<Setter Property="Foreground" Value="#999999" />
