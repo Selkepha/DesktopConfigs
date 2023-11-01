@@ -5,7 +5,8 @@
 // Shortcut: ctrl + space is a nice option.
 
 configuration{
-    combi-modi: [drun,files];
+    modes: [combi];
+    combi-modi: [drun];
     icon-theme: "Papirus-Dark";
 
 	matching: [fuzzy];
