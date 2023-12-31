@@ -9,7 +9,7 @@ configuration{
     combi-modi: [drun];
     icon-theme: "Papirus-Dark";
 
-	matching: [fuzzy];
+	matching: [normal];
     drun-match-fields: [name];
     
     display-drun:               "";
