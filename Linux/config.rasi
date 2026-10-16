@@ -9,7 +9,7 @@ configuration{
     combi-modi: [drun];
     icon-theme: "Papirus-Dark";
 
-    matching: [fuzzy, normal];
+    matching: [normal];
     drun-match-fields: [name];
 
     display-drun:               "";
@@ -25,16 +25,16 @@ configuration{
     highlight: white;
 
     /* Gruvbox dark colors */
-    gruvbox-dark-bg0-soft:     #1b1e20f6;
+    gruvbox-dark-bg0-soft:     #202326f0;
     gruvbox-dark-bg1:          #39395300;
-    gruvbox-dark-bg3:          #4d465c;
+    gruvbox-dark-bg3:          #ffffff20;
     gruvbox-dark-fg0:          #ffffff;
     gruvbox-dark-fg1:          #89a0ae;
-    gruvbox-dark-red-dark:     #cc241d00;
-    gruvbox-dark-red-light:    #fb493400;
-    gruvbox-dark-yellow-dark:  #d7992100;
-    gruvbox-dark-yellow-light: #fabd2f00;
-    gruvbox-dark-gray:         #a8998400;
+    gruvbox-dark-red-dark:     #ffffff00;
+    gruvbox-dark-red-light:    #ffffff00;
+    gruvbox-dark-yellow-dark:  #ffffff00;
+    gruvbox-dark-yellow-light: #ffffff00;
+    gruvbox-dark-gray:         #ffffff00;
 
     /* Theme colors */
     background:                  @gruvbox-dark-bg0-soft;
@@ -74,6 +74,7 @@ window {
     border-radius: @defaultBorderRadius;
     padding: @defaultPadding;
     font: "Ubuntu Regular 18px";
+    //background-image: linear-gradient(45deg, #1b1e2000, #880099e0);
 }
 
 element {
@@ -115,6 +116,9 @@ inputbar {
 
 entry {
     background-color: #00000000;
+    placeholder: "dream softly";
+    margin: 24px;
+    font: "Ubuntu Regular 22px";
 }
 
 mainbox {
